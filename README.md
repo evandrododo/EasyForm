@@ -9,55 +9,55 @@ até a geração de conteúdo HTML (pra enviar por email).
 ** @date(m/Y)   04/2014
 
 
-[ Configuração ]
+# Configuração
 Texto em formato JSON , objeto form com as seguintes propriedades:
 
---- action
+* action
 Ação do formulário, URL para onde os dados serão enviados
 
---- method
+* method
 método de envio: [post|get]
 default: post
 
---- id
+* id
 auto explicativo, rs
 
---- class
+* class
 Classe(s) que serão adicionadas ao form, utilizado para poder modificar o estilo
 
---- fields
+* fields
 Descrição de todos os campos que estarão contidos no form
 
---- --- name
---- Nome por onde vai ser identificado o campo
+* --- name
+* Nome por onde vai ser identificado o campo
 
---- --- type
---- tipo do campo: [ text | email | textarea | image | submit ]
---- default: text
+* --- type
+* tipo do campo: [ text | email | textarea | image | submit ]
+* default: text
 
---- --- placeholder
---- Caso seja declarado coloca como placeholder
+* --- placeholder
+* Caso seja declarado coloca como placeholder
 
---- --- label
---- Caso seja declarado insere o label com o for=$name_do_form
+* --- label
+* Caso seja declarado insere o label com o for=$name_do_form
 
---- --- required
---- Campo de preenchimento obrigatório
+* --- required
+* Campo de preenchimento obrigatório
 
---- --- src
---- [type=image] source da imagem utilizada (como submit)
+* --- src
+* [type=image] source da imagem utilizada (como submit)
 
---- --- alt
---- [type=image] Texto alternativo para a imagem caso ela não carregue
+* --- alt
+* [type=image] Texto alternativo para a imagem caso ela não carregue
 
---- --- value
---- [type=submit] Valor (texto) que o campo terá
-
-
+* --- value
+* [type=submit] Valor (texto) que o campo terá
 
 
 
-[Utilização]
+
+
+# Utilização
 
 // Configurando
 $form_json_config = '{
@@ -86,7 +86,7 @@ $MeuFormTeste->getHTML($campo_obj); //O formulário não precisa ter configuraç
 
 
 
-[Todo]
+# Todo
 
---- $EasyForm->printValues(fields = { "name_campo1" , "name_campo2", "etc" } ) //retorna HTML com os valores (faz um search pelo name)
---- $EasyForm->printValue($field) //retorna o html do $field para exibição
+* $EasyForm->printValues(fields = { "name_campo1" , "name_campo2", "etc" } ) //retorna HTML com os valores (faz um search pelo name)
+* $EasyForm->printValue($field) //retorna o html do $field para exibição
